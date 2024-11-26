@@ -1,9 +1,9 @@
 # print 1 to N using Recursion
 
-def printNos(n):
-    if n==0:
+def printNos(i, n):
+    if i>n:
         return
-    printNos(n-1)
-    print(n, end=" ")
+    print(i, end=" ")
+    printNos(i+1, n)
 
-printNos(5)
+printNos(1, 5)
