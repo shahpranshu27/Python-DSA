@@ -16,3 +16,9 @@ def printNos(n):
     print(n, end=" ")
 
 printNos(5)
+
+'''
+Recursion -> function calls itself inside the function, until specified condition is fulfilled
+
+StackOverflow in Recursion -> When the base condition is not specified, the function calls itself indefinately. This leads to the condition known as stack overflow, where the memory limit exceeds.
+'''
