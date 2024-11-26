@@ -3,7 +3,7 @@
 def printName(n):
     if n==0:
         return
-    printName(n-1)
     print("abc", end=" ")
+    printName(n-1)
 
 printName(5)
