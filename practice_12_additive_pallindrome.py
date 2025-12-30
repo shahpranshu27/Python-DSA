@@ -1,3 +1,7 @@
+'''
+https://www.codechef.com/practice/course/infosys-pyq/INFOSYS04/problems/QQQUOC02
+'''
+
 def isPali(num):
     return str(num) == str(num)[::-1]
 
