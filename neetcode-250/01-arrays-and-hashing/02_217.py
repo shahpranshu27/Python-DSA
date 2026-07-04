@@ -22,7 +22,9 @@ class Solution:
     
         # return False
 
-        arr_set = set(nums)
-        if len(nums) != len(arr_set):
-            return True
-        return False
+        # arr_set = set(nums)
+        # if len(nums) != len(arr_set):
+        #     return True
+        # return False
+        
+        return len(nums) != len(set(nums))
