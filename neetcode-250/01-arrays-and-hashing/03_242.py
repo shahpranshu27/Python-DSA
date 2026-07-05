@@ -9,13 +9,24 @@ class Solution:
 
         # return s == t
 
+        # dict1 = {}
+        # dict2 = {}
+
+        # for i in s:
+        #     dict1[i] = dict1[i]+1 if i in dict1 else 1
+        
+        # for j in t:
+        #     dict2[j] = dict2[j]+1 if j in dict2 else 1
+        
+        # return (dict1 == dict2)
+
         dict1 = {}
         dict2 = {}
 
         for i in s:
-            dict1[i] = dict1[i]+1 if i in dict1 else 1
+            dict1[i] = dict1.get(i, 0) + 1
         
-        for j in t:
-            dict2[j] = dict2[j]+1 if j in dict2 else 1
+        for i in t:
+            dict2[i] = dict2.get(i, 0) + 1
         
-        return (dict1 == dict2)
+        return dict1 == dict2
