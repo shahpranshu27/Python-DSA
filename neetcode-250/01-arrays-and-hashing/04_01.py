@@ -10,21 +10,33 @@ class Solution:
         #         if (nums[i] + nums[j] == target) and (i!=j):
         #             return [i, j]
 
-        A = []
-        for i, num in enumerate(nums):
-            A.append([num, i])
+        # A = []
+        # for i, num in enumerate(nums):
+        #     A.append([num, i])
         
-        A.sort()
+        # A.sort()
         
-        i, j = 0, len(nums)-1
-        while (i<j):
-            curr = A[i][0] + A[j][0]
-            if curr == target:
-                return [min(A[i][1], A[j][1]),
-                        max(A[i][1], A[j][1])]
-            if curr < target:
-                i+=1
-            else:
-                j-=1
+        # i, j = 0, len(nums)-1
+        # while (i<j):
+        #     curr = A[i][0] + A[j][0]
+        #     if curr == target:
+        #         return [min(A[i][1], A[j][1]),
+        #                 max(A[i][1], A[j][1])]
+        #     if curr < target:
+        #         i+=1
+        #     else:
+        #         j-=1
 
-        return [i, j]
+        # return [i, j]
+        
+        # Optimised approach
+        
+        seen = {}
+        
+        for i, num in enumerate(nums):
+            complement = target - num
+            
+            if complement in seen:
+                return [seen[complement], i]
+            
+            seen[num] = i
