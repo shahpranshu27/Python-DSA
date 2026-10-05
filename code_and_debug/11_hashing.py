@@ -39,13 +39,38 @@ Using constraint 1, we can create a pre-filled array from numbers 1 to 10
 # TIME COMPLEXITY -> O(N+M) -->> ~ O(N)
 
 # Using dictionary
-d = {}
+# d = {}
 
-for num in n:
-    d[num] = d.get(num, 0) + 1
+# for num in n:
+#     d[num] = d.get(num, 0) + 1
 
-print(d)
+# print(d)
 
-for num in m:
-    if num in d:
-        print(num, " ", d[num])
+# for num in m:
+#     if num in d:
+#         print(num, " ", d[num])
+
+
+# CHARACTER HASHING
+
+s = "azyxyyzaaaa"
+q = ["d", "a", "y", "x"]
+
+'''
+Constraint:
+1. 'a' <= s[i] <= 'z'
+'''
+
+hash_list = [0] * 26
+
+for char in s:
+    ascii_value = ord(char)
+    index = ascii_value - 97
+    hash_list[index] += 1
+    
+for char in q:
+    ascii_value = ord(char)
+    index = ascii_value - 97
+    print(hash_list[index])
+
+# TIME COMPLEXITY -> O(N + M) ~ O(N)
