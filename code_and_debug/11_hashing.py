@@ -1,5 +1,7 @@
 # Hashing
 
+# NUMBER HASHING
+
 n = [5,3,2,2,1,5,5,7,5,10]
 m = [10,111,1,9,5,67,2]
 
@@ -22,15 +24,28 @@ Constraints:
 '''
 Using constraint 1, we can create a pre-filled array from numbers 1 to 10
 '''
-hash_list = [0] * 11
+# hash_list = [0] * 11
+
+# for num in n:
+#     hash_list[num] += 1
+
+# print(hash_list)
+
+# for num in m:
+#     if num < 1 or num > 10:
+#         continue
+#     else:
+#         print(num, " ", hash_list[num])
+# TIME COMPLEXITY -> O(N+M) -->> ~ O(N)
+
+# Using dictionary
+d = {}
 
 for num in n:
-    hash_list[num] += 1
+    d[num] = d.get(num, 0) + 1
 
-print(hash_list)
+print(d)
 
 for num in m:
-    if num < 1 or num > 10:
-        continue
-    else:
-        print(num, " ", hash_list[num])
+    if num in d:
+        print(num, " ", d[num])
