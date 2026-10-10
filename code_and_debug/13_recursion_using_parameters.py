@@ -30,10 +30,23 @@ Print 1 to N using tail recursion
 Print 1 to N using head recursion
 '''
 
+# def func(i, n):
+#     if i > n:
+#         return
+#     func(i, n-1)
+#     print(n)
+
+# func(1, 5)
+
+
+'''
+Print N to 1 using tail recursion
+'''
+
 def func(i, n):
     if i > n:
         return
-    func(i, n-1)
     print(n)
+    func(i, n-1)
 
 func(1, 5)
