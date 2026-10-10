@@ -73,11 +73,19 @@ Parameterised Recursion
 Sum of 1 to N numbers
 '''
 
+# def func(sum, i, n):
+#     if i > n:
+#         print(sum)
+#         return
+#     sum += i
+#     func(sum, i+1, n)
+
+# func(0, 1, 5)
+
 def func(sum, i, n):
     if i > n:
         print(sum)
         return
-    sum += i
-    func(sum, i+1, n)
+    func(sum+i, i+1, n)
 
 func(0, 1, 5)
