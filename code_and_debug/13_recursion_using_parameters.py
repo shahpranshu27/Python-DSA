@@ -56,10 +56,28 @@ Print N to 1 using tail recursion
 Print N to 1 using head recursion
 '''
 
-def func(i, n):
-    if i > n:
-        return
-    func(i+1, n)
-    print(i)
+# def func(i, n):
+#     if i > n:
+#         return
+#     func(i+1, n)
+#     print(i)
 
-func(1, 5)
+# func(1, 5)
+
+
+'''
+Parameterised Recursion
+'''
+
+'''
+Sum of 1 to N numbers
+'''
+
+def func(sum, i, n):
+    if i > n:
+        print(sum)
+        return
+    sum += i
+    func(sum, i+1, n)
+
+func(0, 1, 5)
