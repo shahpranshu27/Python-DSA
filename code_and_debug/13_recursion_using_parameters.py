@@ -43,10 +43,23 @@ Print 1 to N using head recursion
 Print N to 1 using tail recursion
 '''
 
+# def func(i, n):
+#     if i > n:
+#         return
+#     print(n)
+#     func(i, n-1)
+
+# func(1, 5)
+
+
+'''
+Print N to 1 using head recursion
+'''
+
 def func(i, n):
     if i > n:
         return
-    print(n)
-    func(i, n-1)
+    func(i+1, n)
+    print(i)
 
 func(1, 5)
