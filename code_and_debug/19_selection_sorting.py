@@ -1,4 +1,19 @@
 '''
+Selection Sort Algorithm
+
+take the i and j indices, where j = i+1
+take the min_index = i
+
+iterate the whole array with j loop and if any element with j index is lower than min_index element, then assign min_index to that j index
+
+then after the min_index is assigned, continue with j, and if any element with j index found lower than min_index, assign min_index to that j index
+
+when the first iterate loop is over, swap the elements at i and min_index, then the smallest element from the array will be at the beginning 
+arr[min_index], arr[i] = arr[i], arr[min_index]
+
+'''
+
+'''
 Selection Sort - Ascending order
 '''
 
