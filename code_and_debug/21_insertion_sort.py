@@ -7,6 +7,9 @@ then, compare that key element with arr[j]
 
 if arr[j] > key: >> arr[j+1] = arr[j] and j-= 1
 otherwise, arr[j+1] = key
+
+Time Complexity --> O(N^2)
+Space Complexity --> O(1)
 '''
 
 def insertion_sort(nums):

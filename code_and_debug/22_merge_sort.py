@@ -1,5 +1,8 @@
 '''
 Merge sort - Divide and Merge
+
+Time Complexity --> O(NlogN)
+Space Complexity --> O(N)
 '''
 
 '''

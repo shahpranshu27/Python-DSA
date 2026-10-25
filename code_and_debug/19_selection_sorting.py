@@ -11,6 +11,9 @@ then after the min_index is assigned, continue with j, and if any element with j
 when the first iterate loop is over, swap the elements at i and min_index, then the smallest element from the array will be at the beginning 
 arr[min_index], arr[i] = arr[i], arr[min_index]
 
+Time Complexity --> O(N^2)
+Space Complexity --> O(1)
+
 '''
 
 '''
