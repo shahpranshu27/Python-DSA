@@ -14,3 +14,8 @@ class Solution:
                 index2 -= 1
             else:
                 index1 += 1
+"""
+Time Complexity -->> O(N)
+Sapce Complexity -->> O(1)
+
+"""
